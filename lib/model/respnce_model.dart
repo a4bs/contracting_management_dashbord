@@ -17,7 +17,7 @@ class ResponseModel {
     return ResponseModel(
       data: json['data'],
       message: json['message'],
-      status: json['status'] == 200 ? true : false,
+      status: json['status'],
     );
   }
   Map<String, dynamic> toJson() {

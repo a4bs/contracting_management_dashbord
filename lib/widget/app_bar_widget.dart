@@ -1,12 +1,8 @@
-import 'package:contracting_management_dashbord/constant/app_route.dart';
 import 'package:contracting_management_dashbord/controller/auth_controller/auth_controller.dart';
-import 'package:contracting_management_dashbord/controller/notification_controller/notification_controller.dart';
 import 'package:contracting_management_dashbord/theme/app_colors.dart';
 import 'package:contracting_management_dashbord/widget/dilog_check_user.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
 /// A fully styled custom app bar widget with multiple variants
 /// Supports gradient backgrounds, custom actions, and responsive design
@@ -44,7 +40,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.showShadow = true,
   });
   final authController = Get.find<AuthController>();
-  final notificationController = Get.find<NotificationController>();
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -107,14 +103,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 : null),
         actions: [
           ...actions ?? [],
-          Obx(
-            () => AppBarActions.notification(
-              onPressed: () {
-                Get.toNamed(AppRoute.notification);
-              },
-              badgeCount: notificationController.unreadCount.value,
-            ),
-          ),
+
           IconButton(
             onPressed: () {
               showConfirmationDialog(

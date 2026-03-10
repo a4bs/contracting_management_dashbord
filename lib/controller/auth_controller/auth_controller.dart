@@ -12,7 +12,7 @@ class AuthController extends GetxController {
   login(Map<String, dynamic> data) async {
     try {
       final response = await _authRepo.login(data);
-
+      print(response.toJson());
       if (response.status == true) {
         UserTool.saveUser(UserModel.fromJson(response.data));
         CustomToast.showInfo(title: "تم", description: response.message);
@@ -20,7 +20,7 @@ class AuthController extends GetxController {
         // Start platform-specific notification service after login
         final userId = UserTool.getUser().id;
 
-        Get.offAllNamed(AppRoute.home);
+        Get.offAllNamed(AppRoute.admin);
       } else {
         CustomToast.showInfo(title: "خطأ", description: response.message);
       }

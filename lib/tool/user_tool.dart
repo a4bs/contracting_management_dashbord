@@ -26,12 +26,4 @@ class UserTool {
   static void clear() {
     LocalStorageService.clearAll();
   }
-
-  static bool checkPer(PermeationEnum per) {
-    if (getUser().permissions != null) {
-      return getUser().permissions!.where((e) => e.name == per.name).isNotEmpty;
-    } else {
-      return true;
-    }
-  }
 }

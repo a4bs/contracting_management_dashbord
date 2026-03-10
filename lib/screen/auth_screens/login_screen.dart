@@ -83,18 +83,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Image.asset(
                       AppImage.logoImage,
-                      height: 180,
+                      height: 190,
                     ).animate().fade().scale(),
-                    const SizedBox(height: 20),
-                    Text(
-                      'نظام بورسيبا',
-                      style: Theme.of(context).textTheme.headlineMedium
-                          ?.copyWith(
-                            color: Theme.of(context).colorScheme.primary,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ).animate().fadeIn(delay: 200.ms),
-                    const SizedBox(height: 10),
+
                     Text(
                       'إدارة متكاملة بلمسة عصرية',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(

@@ -16,7 +16,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   WidgetsFlutterBinding.ensureInitialized();
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-    setWindowTitle('نظام بورسيبا');
+    setWindowTitle('نظام البسيط');
     setWindowMinSize(const Size(800, 800));
   }
 

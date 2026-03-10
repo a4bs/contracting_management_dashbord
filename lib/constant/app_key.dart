@@ -1,7 +1,7 @@
 class AppKeys {
   // static final apiUrl = 'https://buildings.entreprisemail.com/api/';
-  static final apiUrl = 'https://buildings-demo.entreprisemail.com/api/';
-  // static final apiUrl = 'http://127.0.0.1:8000/api/';
+  // static final apiUrl = 'https://buildings-demo.entreprisemail.com/api/';
+  static final apiUrl = 'http://127.0.0.1:8000/api/';
 
   // static String get apiUrl => '${apiUrl}/api/';
   static final userInfo = 'userInfo';
